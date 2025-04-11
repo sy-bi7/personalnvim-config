@@ -59,4 +59,5 @@ local opts = {
 	},
 }
 
+  require("config.autocmd")
 	require('lazy').setup("plugins", opts)
