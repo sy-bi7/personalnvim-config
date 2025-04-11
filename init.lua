@@ -20,7 +20,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.confirm = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
@@ -51,13 +51,10 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 local opts = {
 	change_detection = {
-		-- Don't notify us every time a change is made to the configuration
 		notify = false,
 	},
 	checker = {
-		-- Automatically check for package updates
 		enabled = true,
-		-- Don't spam us with notification every time there is an update available
 		notify = false,
 	},
 }
